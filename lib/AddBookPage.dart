@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:taskapp/BookHomePage.dart';
+import 'package:taskapp/MyBookHome.dart';
 
 class AddBookPage extends StatefulWidget {
   const AddBookPage({super.key});
@@ -8,6 +10,9 @@ class AddBookPage extends StatefulWidget {
 }
 
 class _AddBookPageState extends State<AddBookPage> {
+  var _title = "";
+  var _review = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +25,12 @@ class _AddBookPageState extends State<AddBookPage> {
                 children: [
                   ElevatedButton(
                       child: Text('취소'),
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => BookHomePage()),
+                        );
+                      },
                       ),
                   SizedBox(width: 200,),
                   ElevatedButton(
@@ -36,6 +46,9 @@ class _AddBookPageState extends State<AddBookPage> {
                 decoration: InputDecoration(
                   labelText: '책 제목',
                 ),
+                onChanged: (text) {
+                  _title = text;
+                }
               ),
               SizedBox(height: 20,),
               Text('감상평', style: TextStyle(
@@ -45,6 +58,9 @@ class _AddBookPageState extends State<AddBookPage> {
                 decoration: InputDecoration(
                   labelText: '감상평 입력'
                 ),
+                onChanged: (text) {
+                  _review = text;
+                },
               )
             ],
           ),

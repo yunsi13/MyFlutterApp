@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskapp/BookHomePage.dart';
 import 'AddBookPage.dart';
 
 class MyBookHome extends StatefulWidget {
@@ -25,10 +26,10 @@ class _MyBookHomeState extends State<MyBookHome> {
               children: [
                 Image.asset('assets/whyfish.jpg', width: 150,),
                 SizedBox(width: 35,),
-                Image.asset('assets/whyfish.jpg', width: 150,),
+                Image.asset('assets/goo.jpeg', width: 150,),
               ],
             ),
-
+            Text(''),
           ],
         ),
       ),
