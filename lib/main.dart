@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'MyBookHome.dart';
+import 'BookHomePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyBookHome(),
+      home: const BookHomePage(),
     );
   }
 }
